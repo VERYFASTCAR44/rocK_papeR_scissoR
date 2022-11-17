@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+.start {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 255, 0);
+}
+
+.round {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 255, 0);
+}
+
+.end {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 255, 0);
+}
+
+.rock, .paper, .scissor {
+    padding: 10px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 255, 0);
+    background-color: black;
+    border-color: rgb(0, 255, 0);
+}
+
+.gone {
+    color: transparent;
+    border-color: transparent;
+    pointer-events: none;
+}
