@@ -41,12 +41,12 @@ function playRound (playerSelection, computerSelection) {
 const starts = document.querySelectorAll('.start');
 
 const round = document.querySelector('.round');
-round.classList.add('gone');
+round.style.display = 'none';
 round.setAttribute('style', 'white-space: pre;');
 
 const end = document.querySelector('.end');
-end.classList.add('gone');
-round.setAttribute('style', 'white-space: pre;');
+end.style.display = 'none';
+end.setAttribute('style', 'white-space: pre;');
 
 const buttons = document.querySelectorAll('.button');
 
@@ -54,9 +54,7 @@ const buttons = document.querySelectorAll('.button');
 const rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
     for (const start of starts) {
-        start.classList.add(
-            'gone'
-        );
+        start.style.display ='none';
     }
     getComputerChoice();
     const computerSelection = getComputerChoice();
@@ -64,7 +62,7 @@ rock.addEventListener('click', () => {
     console.log(computerSelection);
     console.log(playerSelection);
     playRound(playerSelection, computerSelection);
-    round.classList.remove('gone');
+    round.style.display = 'block';
     if (playRound (playerSelection, computerSelection) === 'T') {
         round.textContent = 'TIE¡\r\n';
         round.textContent += `${playerScore} - ${computerScore}\r\n`;
@@ -83,24 +81,21 @@ rock.addEventListener('click', () => {
         console.log(playerScore);
         console.log(computerScore);
     if (playerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
+        round.style.display = 'none';
+        end.style.display = 'block';
         end.textContent = 'ACCESS__GRANTED\r\n';
-        end.textContent += '****';
+        end.textContent += '*****';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
+            
         }
     } else if (computerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
+        round.style.display = 'none';
+        end.style.display = 'block';
         end.textContent = 'ACCESS__DENIED\r\n';
-        end.textContent += '****';
+        end.textContent += 'xxxxx';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
         }
     } 
 });
@@ -108,9 +103,7 @@ rock.addEventListener('click', () => {
 const paper = document.querySelector('.paper');
 paper.addEventListener('click', () => {
     for (const start of starts) {
-        start.classList.add(
-            'gone'
-        );
+        start.style.display ='none';
     }
     getComputerChoice();
     const computerSelection = getComputerChoice();
@@ -118,7 +111,7 @@ paper.addEventListener('click', () => {
     console.log(computerSelection);
     console.log(playerSelection);
     playRound(playerSelection, computerSelection);
-    round.classList.remove('gone');
+    round.style.display = 'block';
     if (playRound (playerSelection, computerSelection) === 'T') {
         round.textContent = 'TIE¡\r\n';
         round.textContent += `${playerScore} - ${computerScore}\r\n`;
@@ -137,24 +130,21 @@ paper.addEventListener('click', () => {
         console.log(playerScore);
         console.log(computerScore);
     if (playerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
-        end.textContent = 'ACCESS__GRANTED\r\n'
-        end.textContent += '****'
+        round.style.display = 'none';
+        end.style.display = 'block';
+        end.textContent = 'ACCESS__GRANTED\r\n';
+        end.textContent += '*****';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
+            
         }
     } else if (computerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
-        end.textContent = 'ACCESS__DENIED\r\n'
-        end.textContent += '****'
+        round.style.display = 'none';
+        end.style.display = 'block';
+        end.textContent = 'ACCESS__DENIED\r\n';
+        end.textContent += 'xxxxx';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
         }
     } 
 });
@@ -162,9 +152,7 @@ paper.addEventListener('click', () => {
 const scissor = document.querySelector('.scissor');
 scissor.addEventListener('click', () => {
     for (const start of starts) {
-        start.classList.add(
-            'gone'
-        );
+        start.style.display ='none';
     }
     getComputerChoice();
     const computerSelection = getComputerChoice();
@@ -172,7 +160,7 @@ scissor.addEventListener('click', () => {
     console.log(computerSelection);
     console.log(playerSelection);
     playRound(playerSelection, computerSelection);
-    round.classList.remove('gone');
+    round.style.display = 'block';
     if (playRound (playerSelection, computerSelection) === 'T') {
         round.textContent = 'TIE¡\r\n';
         round.textContent += `${playerScore} - ${computerScore}\r\n`;
@@ -191,28 +179,24 @@ scissor.addEventListener('click', () => {
         console.log(playerScore);
         console.log(computerScore);
     if (playerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
-        end.textContent = 'ACCESS__GRANTED\r\n'
-        end.textContent += '****'
+        round.style.display = 'none';
+        end.style.display = 'block';
+        end.textContent = 'ACCESS__GRANTED\r\n';
+        end.textContent += '*****';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
+            
         }
     } else if (computerScore === 5) {
-        round.classList.add('gone');
-        end.classList.remove('gone');
-        end.textContent = 'ACCESS__DENIED\r\n'
-        end.textContent += '****'
+        round.style.display = 'none';
+        end.style.display = 'block';
+        end.textContent = 'ACCESS__DENIED\r\n';
+        end.textContent += 'xxxxx';
         for (const button of buttons) {
-            button.classList.add(
-                'gone'
-            );
+            button.style.display = 'none';
         }
     } 
 });
-
 
 
 
