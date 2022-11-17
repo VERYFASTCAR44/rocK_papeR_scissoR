@@ -25,9 +25,3 @@ body {
     background-color: black;
     border-color: rgb(0, 255, 0);
 }
-
-.gone {
-    color: transparent;
-    border-color: transparent;
-    pointer-events: none;
-}
